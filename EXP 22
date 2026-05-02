@@ -1,0 +1,7 @@
+#include<stdio.h>
+int main(){
+int block[3]={100,500,200},p=150,i,best=999,pos;
+for(i=0;i<3;i++)
+if(block[i]>=p && block[i]<best){best=block[i];pos=i;}
+printf("Allocated in Block %d",pos+1);
+}
