@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main(){
+char user[20],file[20];
+printf("User: ");
+scanf("%s",user);
+printf("File: ");
+scanf("%s",file);
+printf("%s/%s",user,file);
+return 0;
+}
