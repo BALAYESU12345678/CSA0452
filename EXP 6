@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(){
+int n,i,t=0,d=0,at[10],bt[10],rt[10],pr[10];
+scanf("%d",&n);
+for(i=0;i<n;i++){scanf("%d%d%d",&at[i],&bt[i],&pr[i]);rt[i]=bt[i];}
+while(d<n){
+int min=999,p=-1;
+for(i=0;i<n;i++) if(at[i]<=t&&rt[i]>0&&pr[i]<min){min=pr[i];p=i;}
+if(p==-1){t++;continue;}
+rt[p]--; t++;
+if(rt[p]==0){d++;printf("P%d=%d
+",p+1,t);} }
+}
