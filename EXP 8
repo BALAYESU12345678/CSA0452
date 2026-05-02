@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main(){
+int n,i,tq,t=0,rt[10];
+scanf("%d",&n);
+for(i=0;i<n;i++) scanf("%d",&rt[i]);
+scanf("%d",&tq);
+while(1){
+int done=1;
+for(i=0;i<n;i++) if(rt[i]>0){done=0;if(rt[i]>tq){t+=tq;rt[i]-=tq;}else{t+=rt[i];printf("P%d=%d
+",i+1,t);rt[i]=0;}}
+if(done) break; }
+}
