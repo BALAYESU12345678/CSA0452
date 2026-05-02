@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<pthread.h>
+pthread_mutex_t lock;
+void *fun(){
+pthread_mutex_lock(&lock);
+printf("Critical Section
+");
+pthread_mutex_unlock(&lock);
+}
+int main(){
+pthread_t t;
+pthread_mutex_init(&lock,NULL);
+pthread_create(&t,NULL,fun,NULL);
+pthread_join(t,NULL);
+}
