@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<pthread.h>
+void *eat(void *n){
+printf("Philosopher %d Eating
+",*(int*)n);
+}
+int main(){
+pthread_t p[5];
+int i,a[5];
+for(i=0;i<5;i++){
+a[i]=i+1;
+pthread_create(&p[i],NULL,eat,&a[i]);}
+for(i=0;i<5;i++) pthread_join(p[i],NULL);
+}
