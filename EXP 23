@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main(){
+int block[3]={100,500,200},p=150,i;
+for(i=0;i<3;i++)
+if(block[i]>=p){
+printf("Allocated in Block %d",i+1);
+break; }
+}
