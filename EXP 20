@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<pthread.h>
+#include<semaphore.h>
+sem_t s;
+void *read(){ sem_wait(&s); printf("Reading
+"); sem_post(&s);} 
+int main(){
+pthread_t t;
+sem_init(&s,0,1);
+pthread_create(&t,NULL,read,NULL);
+pthread_join(t,NULL);
+}
